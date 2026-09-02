@@ -1,0 +1,53 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml:2:1-24:12
+INJECTED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml:2:1-24:12
+	package
+		INJECTED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml:4:5-22:19
+INJECTED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml:4:5-22:19
+	android:extractNativeLibs
+		INJECTED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml
+	android:label
+		ADDED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml:6:9-39
+	android:allowBackup
+		ADDED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml:5:9-35
+	android:theme
+		ADDED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml:7:9-72
+activity#com.imron.launcher.MainActivity
+ADDED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml:9:9-20:20
+	android:exported
+		ADDED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml:11:13-36
+	android:name
+		ADDED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml:10:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.DEFAULT+category:name:android.intent.category.HOME
+ADDED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml:13:13-18:29
+action#android.intent.action.MAIN
+ADDED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml:14:17-68
+	android:name
+		ADDED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml:14:25-66
+category#android.intent.category.HOME
+ADDED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml:16:17-72
+	android:name
+		ADDED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml:16:27-70
+category#android.intent.category.DEFAULT
+ADDED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml:17:17-75
+	android:name
+		ADDED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml:17:27-73
+uses-sdk
+INJECTED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml
+INJECTED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /data/data/com.termux/files/home/ImronLauncher/app/src/main/AndroidManifest.xml
