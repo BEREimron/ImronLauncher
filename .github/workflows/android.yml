@@ -5,7 +5,6 @@ on:
     branches:
       - master
       - main
-  pull_request:
   workflow_dispatch:
 
 jobs:
@@ -16,7 +15,7 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Setup JDK 17
+      - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -26,20 +25,11 @@ jobs:
       - name: Grant execute permission
         run: chmod +x gradlew
 
-      - name: Decode Keystore
-        run: |
-          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > app/release.jks
+      - name: Build Debug APK
+        run: ./gradlew assembleDebug
 
-      - name: Build Release APK
-        run: |
-          ./gradlew assembleRelease \
-            -Pandroid.injected.signing.store.file=app/release.jks \
-            -Pandroid.injected.signing.store.password="${{ secrets.KEYSTORE_PASSWORD }}" \
-            -Pandroid.injected.signing.key.alias="${{ secrets.KEY_ALIAS }}" \
-            -Pandroid.injected.signing.key.password="${{ secrets.KEY_PASSWORD }}"
-
-      - name: Upload Release APK
+      - name: Upload APK
         uses: actions/upload-artifact@v4
-      with:
-       name: ImronLauncher-Release
-       path: app/build/outputs/apk/release/*.apk
+        with:
+          name: ImronLauncher-Debug
+          path: app/build/outputs/apk/debug/*.apk
