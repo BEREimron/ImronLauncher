@@ -17,16 +17,17 @@ class MainActivity : Activity() {
 
         val pm = packageManager
 
-        val intent = Intent(Intent.ACTION_MAIN, null)
-        intent.addCategory(Intent.CATEGORY_LAUNCHER)
+        val intent = Intent(Intent.ACTION_MAIN, null).apply {
+            addCategory(Intent.CATEGORY_LAUNCHER)
+        }
 
         val apps = pm.queryIntentActivities(intent, 0)
-            .sortedBy { it.loadLabel(pm).toString() }
+            .sortedBy { it.loadLabel(pm).toString().lowercase() }
             .map {
                 AppInfo(
-                    it.loadLabel(pm).toString(),
-                    it.activityInfo.packageName,
-                    it.loadIcon(pm)
+                    name = it.loadLabel(pm).toString(),
+                    packageName = it.activityInfo.packageName,
+                    icon = it.loadIcon(pm)
                 )
             }
 
