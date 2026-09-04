@@ -23,7 +23,7 @@ class AppAdapter(
         return ViewHolder(view)
     }
 
-    override fun getItemCount() = apps.size
+    override fun getItemCount(): Int = apps.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val app = apps[position]
@@ -34,10 +34,11 @@ class AppAdapter(
         holder.itemView.setOnClickListener {
             val intent = holder.itemView.context.packageManager
                 .getLaunchIntentForPackage(app.packageName)
+
+            intent?.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             if (intent != null) {
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 holder.itemView.context.startActivity(intent)
             }
         }
     }
-}
+} 
