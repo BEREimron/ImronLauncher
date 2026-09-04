@@ -13,6 +13,7 @@ class MainActivity : Activity() {
         setContentView(R.layout.activity_main)
 
         val recycler = findViewById<RecyclerView>(R.id.recycler)
+
         recycler.layoutManager = GridLayoutManager(this, 4)
 
         val pm = packageManager
@@ -25,9 +26,9 @@ class MainActivity : Activity() {
             .sortedBy { it.loadLabel(pm).toString().lowercase() }
             .map {
                 AppInfo(
-                    name = it.loadLabel(pm).toString(),
-                    packageName = it.activityInfo.packageName,
-                    icon = it.loadIcon(pm)
+                    it.loadLabel(pm).toString(),
+                    it.activityInfo.packageName,
+                    it.loadIcon(pm)
                 )
             }
 
